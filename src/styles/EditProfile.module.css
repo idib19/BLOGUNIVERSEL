@@ -1,0 +1,302 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.mainCard {
+  background-color: #23b7c2;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 600px ;
+}
+
+.userlogo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.aboutContainer {
+  margin: 4rem;
+}
+
+.aboutCard {
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #055b7ea1;
+  border-radius: 1rem;
+  
+}
+
+.h3 {
+color: #ffffff;
+font-family: sans-serif;
+text-align: center;
+font-size:25px;
+}
+
+.h2 {
+color: #ffffff;
+font-family: sans-serif;
+text-align: center;
+font-size:20px;
+margin: 5px;
+padding: .5rem;
+}
+
+.span {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0;
+  text-align: center;
+  margin: 1rem auto;
+  align-items: center;
+}
+
+.h3{
+  padding: 10px;
+  margin: 10px;
+  color: #ffffff;
+  font-family: Georgia, Times, 'Times New Roman', sans-serif;
+  
+}
+
+.p {
+  padding: 5px;
+  margin: 2rem auto;
+  width: fit-content;
+  border-radius: .5rem; 
+  padding: .5rem;   
+  color: #ffffff;
+  font-family: Georgia, Times, 'Times New Roman', sans-serif;
+  font-size: medium;
+}
+
+.username {
+  padding: 5px;
+  margin: 10px auto;
+  width: fit-content;
+  min-width: 150px;
+  background-color:#000000c5;
+  border-radius: 2rem; 
+  padding: .5rem;   
+  color: #ffffff;
+  font-family: Georgia, Times, 'Times New Roman', sans-serif;
+  font-size: large;
+}
+
+.about {
+  padding: 5px;
+  margin: 1rem auto;
+  border-radius: 5px; 
+  width: auto;
+  align-items: center;
+  text-align: center;
+  padding: .5rem;   
+  background-color: #000000c5;
+  border-radius: .8rem;
+  color: #ffffff;
+  font-family: Georgia, Times, 'Times New Roman', sans-serif;
+  font-size: larger;
+}
+
+
+.inscrirebutton {
+  background-color: #fff;
+  border-radius: 25px;
+  border: 0;
+  color: #2a91cc;
+  font-size: 18px;
+  font-weight: bold;
+  outline: 0;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.span:hover {
+  border: 2px rgb(0, 0, 0);
+}
+
+
+
+.divcontainer {
+  text-align: center;
+  margin: 2rem auto;
+  align-items: center;
+  display: flex;
+  background-color: #23b7c2;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 15px ;
+  
+}
+
+ .mainCard {
+  margin: 2rem auto;
+  align-items: center;
+  border-radius: 15px;
+  height: auto
+
+}
+
+ .card {
+   padding: 2rem;
+   background-color: #098a1a;
+   border-radius: .5rem;
+   width: auto;
+ }
+
+ .card2 {
+  padding: .5rem;
+  background-color: #007add;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+ .span {
+   text-align: center;
+   font-size: 30px;
+   font-weight: 600;
+   padding: 0;
+
+ }
+
+ .h3 {
+   margin: 5px;
+   color: #ffffff;
+   font-family: Georgia, Times, 'Times New Roman', sans-serif;
+ }
+
+ .form {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   max-width: 600px;
+   margin: 1rem auto;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+ .form input {
+   margin: 8px;
+ }
+
+ .input {
+   background-color: #e1e7f1;
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: rgb(0, 0, 0);
+   font-size: 15px;
+   height: 100%;
+   outline: 0;
+   padding: 10px;
+   width: 100%;
+ }
+
+ .inscrirebutton {
+   background-color: #007e0a;
+   border-radius: 5rem;
+   border: 0;
+   box-sizing: border-box;
+   color: #eee;
+   font-size: 25px;
+   height: 100%;
+   outline: 0;
+   padding: 20px;
+   width: 100%;
+
+ }
+ .retourbutton {
+  background-color: #20212b;
+  color: #eee;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 5px;
+
+}
+
+ .radio {
+   opacity: 0;
+ }
+
+ .radio+img {
+   cursor: pointer;
+ }
+
+ .radio:hover+img{
+  border: 4px solid white;
+ }
+
+ .radio:checked+img {
+   border: 8px solid rgb(255, 123, 0);
+ }
+
+ .avatarChoice {
+  background-color: #16da57a8;
+  border-radius: 15px;
+  padding: 3rem;
+ }
+
+ .avatarChoice label img{
+  border-radius: 99px;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+        0 1px 1px rgba(128, 128, 128, 0.155),
+        0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+        0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+        0 12px 12px rgba(128, 128, 128, 0.35);
+ }
+
+ 
+@media (max-width : 650px) {
+  .mainCard {
+      width: auto;
+      margin: 2rem;
+  }
+
+  .inscrirebutton {
+      font-size: 12px;
+      width: auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .aboutContainer {
+      margin: 1rem;
+      
+  }
+
+  .about {
+      margin: 2rem auto;
+      font-size: 20px;
+  }
+
+  .p {
+      margin: 1rem auto;
+      width: fit-content;   
+  }
+
+  .avatarChoice {
+    background-color: #16da57a8;
+    border-radius: 15px;
+    padding: 1rem;
+   }
+  
+
+}

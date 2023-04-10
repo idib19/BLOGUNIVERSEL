@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "ignore": ["node_module", "next"],
+    "watch":["server/**/*", "server.js"],
+    "ext": "js json"
+}

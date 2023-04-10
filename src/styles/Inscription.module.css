@@ -1,0 +1,127 @@
+.divcontainer {
+  text-align: center;
+  margin: 2rem auto;
+  align-items: center;
+  display: flex;
+  background-color: #23b7c2;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 15px ;
+  
+}
+
+ .mainCard {
+  margin: auto;
+  align-items: center;
+  border-radius: 15px;
+  height: auto
+
+}
+
+ .card {
+   padding: 2rem;
+   background-color: #098a1a;
+   border-radius: .5rem;
+   width: auto;
+ }
+
+ .card2 {
+  padding: .5rem;
+  background-color: #007add;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+ .span {
+   text-align: center;
+   font-size: 30px;
+   font-weight: 600;
+   padding: 0;
+
+ }
+
+ .h3 {
+   margin: 5px;
+   color: #ffffff;
+   font-family: Georgia, Times, 'Times New Roman', sans-serif;
+ }
+
+ .form {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   max-width: 600px;
+   margin: 1rem auto;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+ .form input {
+   margin: 8px;
+ }
+
+ .input {
+   background-color: #e1e7f1;
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: rgb(0, 0, 0);
+   font-size: 15px;
+   height: 100%;
+   outline: 0;
+   padding: 10px;
+   width: 100%;
+ }
+
+ .inscrirebutton {
+   background-color: #007e0a;
+   border-radius: 5rem;
+   border: 0;
+   box-sizing: border-box;
+   color: #eee;
+   font-size: 25px;
+   height: 100%;
+   outline: 0;
+   padding: 20px;
+   width: 100%;
+
+ }
+ .retourbutton {
+  background-color: #20212b;
+  color: #eee;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 5px;
+
+}
+
+ .radio {
+   opacity: 0;
+ }
+
+ .radio+img {
+   cursor: pointer;
+ }
+
+ .radio:hover+img{
+  border: 4px solid white;
+ }
+
+ .radio:checked+img {
+   border: 8px solid rgb(255, 123, 0);
+ }
+
+ .avatarChoice label img{
+  border-radius: 99px;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+        0 1px 1px rgba(128, 128, 128, 0.155),
+        0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+        0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+        0 12px 12px rgba(128, 128, 128, 0.35);
+ }
+
+ 

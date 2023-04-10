@@ -1,0 +1,25 @@
+.imagecontainer {
+  display: grid;
+  width: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.topcards {
+  background-color: #2a91cc;
+  padding: 8px;
+  border-radius:10%;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+
+@media screen and (max-width: 650px) {
+  .imagecontainer {
+    display: none;
+  }
+}

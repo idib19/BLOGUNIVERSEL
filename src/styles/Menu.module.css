@@ -1,0 +1,145 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 2rem 1rem;
+    background-color: #0000003a;
+
+}
+
+.menu {
+    margin: 0 -1rem;
+}
+
+
+.menuText {
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(217, 245, 243, 0.253);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+
+}
+
+
+.item {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+
+.menuhome {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s linear;
+    border: 5px rgb(179, 111, 111);
+    
+}
+
+
+.item:hover,
+.menuhome {
+    color: #5cf4ff9c;
+    border-right: 5px solid #ffffff;
+}
+
+.menutoggle {
+    display: block;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    background-color: #00000059;
+    cursor: pointer;
+
+}
+
+.hamburger {
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+}
+
+.hamburger>span,
+.hamburger>span::before,
+.hamburger>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 99px;
+    background-color: #fff;
+    transition-duration: -25s;
+}
+
+.hamburger>span::before {
+    content: ' ';
+    top: -8px;
+
+}
+
+.hamburger>span::after {
+    content: ' ';
+    top: 8px;
+}
+
+.menutoggle.is-active .hamburger>span {
+    transform: rotate(45deg);
+}
+
+.menutoggle.is-active .hamburger>span::before {
+    transform: rotate(0deg);
+}
+
+.menutoggle.is-active .hamburger>span::after {
+    transform: rotate(90deg);
+}
+
+
+@media (max-width : 650px) {
+
+    .menutoggle{
+        z-index: 1;
+    }
+
+    .sidebar {
+        max-width: 180px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .menutoggle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;    
+    }
+
+    .hamburger {
+        width: 12px;
+    }
+
+    .hamburger>span,
+    .hamburger>span::before,
+    .hamburger>span::after {
+        height: 3px;
+    }
+}
+  
+  

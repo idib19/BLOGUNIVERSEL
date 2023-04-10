@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.mainCard {
+    background-color: #2a91cc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 600px ;
+    margin: 2rem auto;
+
+}
+
+.userlogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.aboutContainer {
+    margin: 4rem;
+}
+
+.aboutCard {
+    margin: 1rem auto;
+    max-width: 600px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #055b7ea1;
+    border-radius: 1rem;
+    
+}
+
+.span {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+    text-align: center;
+    margin: 1rem auto;
+    align-items: center;
+}
+
+.h3{
+    padding: 10px;
+    margin: 10px;
+    color: #ffffff;
+    font-family: Georgia, Times, 'Times New Roman', sans-serif;
+    
+}
+
+.p {
+    padding: 5px;
+    margin: 2rem auto;
+    width: fit-content;
+    border-radius: .5rem; 
+    padding: .5rem;   
+    color: #ffffff;
+    font-family: Georgia, Times, 'Times New Roman', sans-serif;
+    font-size: medium;
+}
+
+.username {
+    padding: 5px;
+    margin: 10px auto;
+    width: fit-content;
+    min-width: 150px;
+    background-color:#000000c5;
+    border-radius: 2rem; 
+    padding: .5rem;   
+    color: #ffffff;
+    font-family: Georgia, Times, 'Times New Roman', sans-serif;
+    font-size: large;
+}
+
+.about {
+    padding: 5px;
+    margin: 1rem auto;
+    border-radius: 5px; 
+    width: auto;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;   
+    background-color: #000000c5;
+    border-radius: .8rem;
+    color: #ffffff;
+    font-family: Georgia, Times, 'Times New Roman', sans-serif;
+    font-size: larger;
+}
+
+
+.inscrirebutton {
+    background-color: #fff;
+    border-radius: 25px;
+    border: 0;
+    color: #2a91cc;
+    font-size: 18px;
+    font-weight: bold;
+    outline: 0;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.span:hover {
+    border: 2px rgb(0, 0, 0);
+}
+
+
+
+
+@media (max-width : 650px) {
+    .mainCard {
+        width: auto;
+        margin: 2rem;
+    }
+
+    .inscrirebutton {
+        font-size: 12px;
+        width: auto;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .aboutContainer {
+        margin: 1rem;
+        
+    }
+
+    .about {
+        margin: 2rem auto;
+        font-size: 20px;
+    }
+
+    .p {
+        margin: 1rem auto;
+        width: fit-content;   
+    }
+
+}

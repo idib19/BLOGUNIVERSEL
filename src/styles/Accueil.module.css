@@ -1,0 +1,238 @@
+  /* Add a card effect for articles */
+
+  .logotop{
+    margin: .5rem auto;
+  }
+
+  .blogunilogo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 1rem;
+
+}
+  .header{
+    background-color: #5cf4ff59;
+    border-radius: 5rem;
+    margin: 1rem auto ;
+    width: auto;
+    height: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+  .headercontainerlogo {
+    display:flex;
+    margin: auto;
+    align-items: center;
+}
+
+.userlogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px ;
+}
+
+.searchbarheader {
+    border-radius: 5rem;
+    border: none;
+    text-align: center;
+    height: 2rem;
+    width: auto;
+}
+
+.menuSpacer {
+  margin-left: 1rem;
+}
+
+.avatarSpacer {
+  margin-right: 1rem;
+}
+
+
+
+
+.main{
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.acceuil{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.entete{
+  display: flex;
+  flex-direction: column;
+}
+
+/* BELOW NOT USED 
+
+.toppastilles {
+  flex-direction: row;
+  background-color: #5cf4ff59;
+  border-radius: 20px;
+  margin: .5rem;
+  display: inline-block;
+}
+  
+
+
+
+.mostpopulartitle {
+  background-color: #d61616;
+  border-radius: 1rem;
+  padding: 20px;
+  color:rgb(255, 234, 0);
+  font-family:'Courier New', Courier, monospace;
+  margin: .5rem;
+}
+
+.mostpopularcard {
+  background-color: #f67403;
+  padding: 3px;
+  border-radius: 20px;
+} 
+
+.mostpopsubjects {
+  border-style: outset;
+  padding: 4px;
+  border-radius: 2rem;
+  background-color: #d7d011e0;
+  padding: 15px;
+  color:rgb(0, 0, 0);
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif ;
+}
+
+.contentbackground {
+    background-color: #043657;
+    border-radius: .7rem;
+    height: 200px;
+    margin: .5rem;
+}
+
+.contentDetails {
+  margin: 1rem;
+  color: rgb(255, 255, 255);
+  padding: .3rem;
+}
+
+.datepublished {
+  float: right;
+  color: white;
+  margin-right: 1rem;
+}
+
+.postinfo {
+  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+  font-size: 15px;
+  color: white;
+  margin-left: 1rem;
+}
+
+.sujets {
+  border-style: outset;
+  padding: 4px;
+  border-radius: 2rem;
+  background-color: #1c3089e0;
+  padding: 15px;
+  color:rgb(240, 238, 255);
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif ;
+}
+
+.mainsubject {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-style:outset;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  background-color: #141738;
+}
+
+.comments {
+  border-style:inset;
+  padding: 4px;
+  border-radius: 5px;
+  color: white;
+  background-color: #141738;
+}
+
+.userComment {
+  width: 100%;
+  height: 30px;
+  padding: 15px;
+  font:caption;
+  background-color: #f5f3f3e6;
+}
+
+.searchbar {
+  text-decoration: none;
+  border-radius: 10px;
+  height: 2rem;
+  margin-top: 1.5rem;
+  padding: 20px;
+}
+
+.searchbarcard {
+  background-color: #2a91cc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}  
+
+
+
+
+
+*/
+
+
+
+
+@media screen and (max-width: 750px) {
+  .postinfo {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .postinfo {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+  .postinfo {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-size: 8.7px;
+    padding: 0px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .userlogo {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px ;
+  }
+  
+  .searchbarheader {
+    width: 150px;
+  }
+
+  .header{
+    height: 40px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    
+}
+}
+

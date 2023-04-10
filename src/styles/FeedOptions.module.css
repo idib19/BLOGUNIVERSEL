@@ -1,0 +1,51 @@
+.maincontainer {
+  background-color: #2a91cc;
+  border-radius: 15px;
+  margin: 2rem;
+
+
+}
+
+.feedsort {
+  border-radius: 1rem;
+  padding: 5px;
+  color: rgb(240, 238, 255);
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 1rem;
+}
+
+.feedbuttons {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0;
+  color: #2a91cc;
+  font-size: 18px;
+  font-weight: bold;
+  outline: 0;
+  padding: 10px;
+  width: auto;
+  text-align: center;
+}
+
+.formContainer {
+  background-color: #73c2d7;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px;
+  width: all;
+  margin: 2rem;
+
+
+}
+
+.formpost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
