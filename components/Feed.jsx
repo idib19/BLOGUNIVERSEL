@@ -42,10 +42,10 @@ export default function Feed(props) {
 
         switch (subject) {
             case 'Football':
-                subjectId = "1";
+                subjectId = "2";
                 break;
             case 'Basketball':
-                subjectId = "2";
+                subjectId = "1";
                 break;
             case 'Music':
                 subjectId = "3";

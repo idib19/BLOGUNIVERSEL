@@ -17,6 +17,8 @@ model User {
   biography   String    @default("Hello World!")
   comments    Comment[] @relation("userComments")
   posts       Post[]    @relation("userPosts")
+  friends     User[]    @relation("userFriends")
+  friendOf    User[]    @relation("userFriends")
 }
 
 model Subject {
@@ -35,6 +37,7 @@ model Post {
   comments          Comment[] @relation("postComments")
   subject           Subject   @relation("subjectPosts", fields: [subjectId], references: [id])
   user              User      @relation("userPosts", fields: [userId], references: [id])
+  likes             Int       @default(0)
 }
 
 model Comment {
