@@ -13,13 +13,25 @@ export default function Post({ post, idUser }) {
     const [showModal, setShowModal] = useState(false);
 
 
-// handlelike button
-const [likeCount, setLikeCount] = useState(0); //state 
-const handleLike = () => {
-// API CALL TO UPDATE LIKE COUNT 
+    // handlelike button
+    const [likeCount, setLikeCount] = useState(0); //state 
 
-// front end mise a jour 
-setLikeCount(likeCount + 1); }
+    const handleLike = async (postId) => {
+        // mettre a jour le front end
+        // setLikeCount(likeCount + 1);
+
+        try {
+            // API CALL TO API/like
+            const response = await axios
+                    .put('/api/like', { postId })
+
+            console.log('new like !', response.data)
+        }
+        catch (e) {
+            console.log('une erreur est survenue like' + { postId })
+        }
+
+    }
 
     // AJOUT D'UN NOUVEAU COMMENT
     const commentaire = useRef(null);
@@ -35,6 +47,7 @@ setLikeCount(likeCount + 1); }
             console.log('New Comment', response.data)
 
             commentaire.current.value = '';
+            console.log('le id du post est :' + { postId })
         } catch (error) {
             console.error('Erreur lors de creation du comment')
         }
@@ -61,7 +74,7 @@ setLikeCount(likeCount + 1); }
 
                 <h5 className={styles.postinfo}>
 
-                    <Image src={post.user.avatar} className={styles.userlogo}  width={25} height={25}/>
+                    <Image src={post.user.avatar} className={styles.userlogo} width={25} height={25} />
 
                     {post.user.name}
 
@@ -82,10 +95,10 @@ setLikeCount(likeCount + 1); }
                     <p className={styles.commentsContainer}>Most recent comment.</p>
                     {/*<input className={styles.likebutton} type="button" value="LIKE" />}
                 </div>*/}
-                
+
 
                 {/* <p className={styles.comments}>Comment that got the most upvotes.</p> */}
-                
+
                 <div>
                     <motion.div className={styles.feedsort} whileHover={{ scale: [1, 1.05], transition: { duration: .25 } }}>
                         <button className={styles.commentBanner} onClick={() => setShowModal(true)}>View Comments</button>
@@ -99,24 +112,37 @@ setLikeCount(likeCount + 1); }
                             <button onClick={() => setShowModal(false)} className={styles.buttonX}>X</button>
 
                             <div className={styles.commentsContainer}>
-                            <ul className={styles.ul}>
-                                {post.comments.map((comment) => (
-                                    <li className={styles.li} key={comment.id}>
-                                        <div>
-                                            <span><Image src={comment.user.avatar} className={styles.userlogoInComments}  width={25} height={25}/>{comment.user.name}</span>
-                                        </div>
-                                        <div>
-                                            <span className={styles.commentMade}>{comment.content}</span>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                                <ul className={styles.ul}>
+                                    {post.comments.map((comment) => (
+                                        <li className={styles.li} key={comment.id}>
+                                            <div>
+                                                <span><Image src={comment.user.avatar} className={styles.userlogoInComments} width={25} height={25} />{comment.user.name}</span>
+                                            </div>
+                                            <div>
+                                                <span className={styles.commentMade}>{comment.content}</span>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </motion.div>
                     </Modal>}
                 </div>
 
                 <div className={styles.likeCommentsection}>
+
+
+                    <button className={styles.likebutton} onClick={() => handleLike(post.id)} >
+
+                        <span className={styles.likeicon}>
+
+                            <Image src="/upvote.png" height={25} width={25} ></Image>
+
+                        </span>
+
+                        <span className={styles.likecount}> {post.likes}</span>
+
+                    </button>
 
 
                     <div className={styles.commentInputSection}>
@@ -127,24 +153,12 @@ setLikeCount(likeCount + 1); }
                             ref={commentaire}
                         />
                     </div>
+
                     <button className={styles.subCommentBtn} onClick={() => SubmitCommentServer(post.id)}>POST</button>
 
                 </div>
 
-{/* 
-                <button className={styles.likebutton}  >
 
-                    <span className={styles.likeicon}>
-
-                        <Image src="/upvote.png" height={25} width={25} onClick={handleLike}></Image>
-
-                    </span>
-
-                    <span className={styles.likecount}> {likeCount}</span>
-
-                </button>
-
-*/}
 
 
             </div>
