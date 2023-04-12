@@ -14,24 +14,42 @@ export default function Post({ post, idUser }) {
 
 
     // handlelike button
-    const [likeCount, setLikeCount] = useState(0); //state 
-
+    const [likeCount, setLikeCount] = useState(post.likes); //state 
+    const [Liked, setIsLiked] = useState(false);
+    
     const handleLike = async (postId) => {
-        // mettre a jour le front end
-        // setLikeCount(likeCount + 1);
+        if (Liked) {
+            setLikeCount(likeCount - 1);
 
-        try {
-            // API CALL TO API/like
-            const response = await axios
-                    .put('/api/like', { postId })
+            try {
+                // API CALL TO API/like decrement 
+                const response = await axios.put('/api/like', { postId })
+                console.log('new like !', response.data);
+                setIsLiked(!Liked);
+            }
+            catch (e) {
+                console.log('une erreur est survenue like')
+            }
+           
 
-            console.log('new like !', response.data)
+        } else {
+            setLikeCount(likeCount + 1);
+
+            try {
+                // API CALL TO API/like increment 
+                const response = await axios.post('/api/like', { postId })
+                console.log('new like !', response.data);
+                setIsLiked(!Liked);
+            }
+            catch (e) {
+                console.log('une erreur est survenue like')
+            }
+             
         }
-        catch (e) {
-            console.log('une erreur est survenue like' + { postId })
-        }
-
+    
+    
     }
+    
 
     // AJOUT D'UN NOUVEAU COMMENT
     const commentaire = useRef(null);
@@ -140,7 +158,7 @@ export default function Post({ post, idUser }) {
 
                         </span>
 
-                        <span className={styles.likecount}> {post.likes}</span>
+                        <span className={styles.likecount}> {likeCount}</span>
 
                     </button>
 
