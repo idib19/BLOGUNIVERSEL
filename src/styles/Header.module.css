@@ -1,8 +1,6 @@
   /* Add a card effect for articles */
 
-  .logotop {
-    margin: .5rem auto;
-  }
+
 
   .blogunilogo {
     width: 40px;
@@ -62,13 +60,7 @@
     align-items: center;
   }
 
-  .toprightmenu {
-    width: 55px;
-    height: 50px;
-    float: right;
-    margin-top: 1.5rem;
-    margin-right: 2.2rem;
-  }
+
 
   .headercontainerlogo {
     display: grid;
@@ -85,14 +77,15 @@
 
   .imagecontainer ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0.5rem;
+    padding: 0;
   }
 
   .imagecontainer ul li {
     list-style-type: none;
-
+    margin: 0 auto;
   }
 
   .topcards {
@@ -101,8 +94,7 @@
     border-radius: 10%;
     height: 70px;
     width: 70px;
-    display: inline-block;
-    vertical-align: middle;
+ 
 
   }
 

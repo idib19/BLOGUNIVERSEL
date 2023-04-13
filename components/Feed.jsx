@@ -14,7 +14,7 @@ export default function Feed(props) {
     const Id = props
     const idUser = Id.props
 
-    // Feed Fetching
+    // Fetching all the  from the database 
     const [data, setdata] = useState([]);
     const fetchApi = async () => {
         const response = await axios.get('/api/publications')
