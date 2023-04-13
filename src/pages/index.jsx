@@ -11,10 +11,34 @@ import { verifierAuthentication } from 'modele/verifierAuth'
 import { parse } from 'cookie';
 import { getUserByToken } from 'modele/getUser'
 
+import basket from '/public/pastillesPics/basketball.png'
+import football from '/public/pastillesPics/football.jpg'
+import music from '/public/pastillesPics/music.jpg'
+import politics from '/public/pastillesPics/politics.png'
+import { useState } from 'react'
+
 
 export default function Home({ user }) {
   const router = useRouter()
 
+  const [searchInput, setSearchInput] = useState("")
+  // ICI le tableau images , on va la recuperer sur la database et on pourra appliiquer la fonction 
+  //de filtering sur la terminaison API. for exemple on va fetcher sur api/getsubjects
+  const images = [
+    { id: 1, src: basket, alt: 'basketball logo' },
+    { id: 2, src: football, alt: 'football logo' },
+    { id: 3, src: music, alt: 'music logo' },
+    { id: 4, src: politics, alt: 'politics logo' },
+  ]
+
+  const handleChange = (e) => {
+    setSearchInput(e.target.value)
+  }
+
+  // Cette fonction permet de filtrer les subject en fonction de la valeur entree dans searchinput
+  const filteredImages = images.filter((image) => {
+    return image.alt.toLowerCase().includes(searchInput.toLowerCase())
+  })
 
   return <>
     <div className={styles.acceuil}>
@@ -33,21 +57,29 @@ export default function Home({ user }) {
         <header className={styles.header}>
 
 
-          <div className={styles.headercontainerlogo}>
 
-            <motion.div className={styles.avatarSpacer} onClick={() => router.push('/ViewProfile')} whileHover={{ scale: [1, .9, 1.08], transition: { duration: .25 } }}>
-              <Image src={user.avatar} alt='User profil' className={styles.userlogo} width={50} height={50} />
-            </motion.div>
+            <div className={styles.headercontainerlogo}>
 
-            <input className={styles.searchbarheader} type='search' placeholder='Rechercher' />
+              <motion.div className={styles.avatarSpacer} onClick={() => router.push('/ViewProfile')} whileHover={{ scale: [1, .9, 1.08], transition: { duration: .25 } }}>
+                <Image src={user.avatar} alt='User profil' className={styles.userlogo} width={50} height={50} />
+              </motion.div>
 
-          <div className={styles.menuSpacer}>
-            <Menu />
-          </div>
+              <input
+                className={styles.searchbarheader}
+                type='search'
+                placeholder='Rechercher'
+                onChange={handleChange}
+                value={searchInput}
+              />
+
+              <div className={styles.menuSpacer}>
+                <Menu />
+              </div>
 
 
-          </div>
+            </div>
 
+   
         </header>
 
       </div>
@@ -57,7 +89,19 @@ export default function Home({ user }) {
       <main className={styles.main}>
         <motion.div initial='hidden' animate='visible' variants={{ hidden: { scale: .8, opacity: 0 }, visible: { scale: [.9, 1], opacity: 1, transition: { delay: .3 } } }} >
 
-          <Topics />
+        <div className={styles.imagecontainer}>
+              <ul>
+                {filteredImages.map((image) => (
+                  <li key={image.id} >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className={styles.topcards}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
 
           <Feed props={user.id} />
 
