@@ -11,6 +11,7 @@ import { verifierAuthentication } from 'modele/verifierAuth'
 import { parse } from 'cookie';
 import { getUserByToken } from 'modele/getUser'
 
+// ACORRIGER : LES SUBJECTS DOIVENT ETRE FETCHER DEPUIS LA BD
 import basket from '/public/pastillesPics/basketball.png'
 import football from '/public/pastillesPics/football.jpg'
 import music from '/public/pastillesPics/music.jpg'
