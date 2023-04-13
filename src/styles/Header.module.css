@@ -1,10 +1,68 @@
-.container {
-    display:flex;
+  /* Add a card effect for articles */
+
+  .logotop {
+    margin: .5rem auto;
+  }
+
+  .blogunilogo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 1rem;
+
+  }
+
+  .header {
+    background-color: #5cf4ff59;
+    border-radius: 5rem;
+    margin: 1rem auto;
+    width: 600px;
+    height: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+  }
+
+  .headercontainerlogo {
+    display: flex;
+    margin: auto;
+    align-items: center;
+  }
+
+  .userlogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+  }
+
+  .searchbarheader {
+    border-radius: 5rem;
+    border: none;
+    text-align: center;
+    height: 2rem;
+    width: auto;
+  }
+
+  .menuSpacer {
+    margin-left: 1rem;
+  }
+
+  .avatarSpacer {
+    margin-right: 1rem;
+  }
+
+
+
+
+
+  .container {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.toprightmenu {
+  .toprightmenu {
     width: 55px;
     height: 50px;
     float: right;
@@ -12,15 +70,45 @@
     margin-right: 2.2rem;
   }
 
-.headercontainerlogo {
-    display:grid;
+  .headercontainerlogo {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+  }
 
-.avatarChoice:hover{
+  .avatarChoice:hover {
     border: 4px solid white;
-   }
+  }
+
+  .imagecontainer {
+    margin: 0.5rem;
+  }
+
+  .imagecontainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  .imagecontainer ul li {
+    list-style-type: none;
+
+  }
+
+  .topcards {
+    background-color: #2a91cc;
+    padding: 8px;
+    border-radius: 10%;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    vertical-align: middle;
+
+  }
 
 
-  
-  
+  @media screen and (max-width: 650px) {
+    .imagecontainer {
+      display: none;
+    }
+  }
