@@ -11,23 +11,20 @@ export default function Feed(props) {
     const [showModal, setShowModal] = useState(false);
 
     // getting userID
-    const Id = props
-    const idUser = Id.props
+    const idUser = props.userId
+    const filter = props.filter
+    console.log(filter);
 
     // Fetching all the  from the database 
-    const [data, setdata] = useState([]);
-    const fetchApi = async () => {
-        const response = await axios.get('/api/publications')
-        const donnee = response.data
-
-        setdata(donnee)
-
-    };
-
-    //Fecthing at the rendering
+    const [data, setData] = useState([]);
     useEffect(() => {
+        const fetchApi = async () => {
+          const response = await axios.get(`/api/publications/${filter}`);
+          const donnee = response.data;
+          setData(donnee);
+        };
         fetchApi();
-    }, [])
+      }, [filter]);
 
 
     // STATE TITLE AND CONTENT AND SUBJECT FOR POST MODAL
@@ -88,6 +85,7 @@ export default function Feed(props) {
             <div className={styles.maincontainer}>
                 <motion.div className={styles.feedsort} whileHover={{ scale: [1, 1.15], transition: { duration: .25 } }}>
                     <button className={styles.feedbuttons} onClick={() => setShowModal(true)}>POSTER</button>
+                    
                 </motion.div>
 
                 {showModal && <Modal

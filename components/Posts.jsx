@@ -84,7 +84,7 @@ export default function Post({ post, idUser }) {
 
             <div className={styles.card}>
 
-                <h2 className={styles.mainsubject}>{post.title}</h2>
+                <h2 className={styles.mainsubject}>{post.subject.name}</h2>
 
                 <div className={styles.datepublished}>
                     <span className={styles.datepublished}> {post.dateOfPublication.slice(0, 10)}</span>
@@ -92,7 +92,7 @@ export default function Post({ post, idUser }) {
 
                 <h5 className={styles.postinfo}>
 
-                    <Image src={post.user.avatar} className={styles.userlogo} width={25} height={25} />
+                    <Image src={post.user.avatar} alt={post.user.name} className={styles.userlogo} width={25} height={25} />
 
                     {post.user.name}
 
@@ -132,9 +132,9 @@ export default function Post({ post, idUser }) {
                             <div className={styles.commentsContainer}>
                                 <ul className={styles.ul}>
                                     {post.comments.map((comment) => (
-                                        <li className={styles.li} key={comment.id}>
+                                        <li key={comment.id} className={styles.li} >
                                             <div>
-                                                <span><Image src={comment.user.avatar} className={styles.userlogoInComments} width={25} height={25} />{comment.user.name}</span>
+                                                <span><Image src={comment.user.avatar} alt={comment.user.name} className={styles.userlogoInComments} width={25} height={25} />{comment.user.name}</span>
                                             </div>
                                             <div>
                                                 <span className={styles.commentMade}>{comment.content}</span>
@@ -154,7 +154,7 @@ export default function Post({ post, idUser }) {
 
                         <span className={styles.likeicon}>
 
-                            <Image src="/upvote.png" height={25} width={25} ></Image>
+                            <Image src="/upvote.png" alt='like button' height={25} width={25} ></Image>
 
                         </span>
 

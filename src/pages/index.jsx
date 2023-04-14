@@ -26,13 +26,13 @@ export default function Home({ user }) {
   // ICI le tableau images , on va la recuperer sur la database et on pourra appliiquer la fonction 
   //de filtering sur la terminaison API. for exemple on va fetcher sur api/getsubjects
   const images = [
-    { id: 1, src: basket, alt: 'basketball logo' },
+    { id: 1, src: basket, alt: 'Basketball logo' },
     { id: 2, src: football, alt: 'football logo' },
     { id: 3, src: music, alt: 'music logo' },
     { id: 4, src: politics, alt: 'politics logo' },
   ]
 
-  const handleChange = (e) => {
+  const handleSearch = (e) => {
     setSearchInput(e.target.value)
   }
 
@@ -40,6 +40,13 @@ export default function Home({ user }) {
   const filteredImages = images.filter((image) => {
     return image.alt.toLowerCase().includes(searchInput.toLowerCase())
   })
+
+
+  const [filter, setFilter] = useState("")
+
+  const filterbySubject = (value) => {
+    setFilter(value);
+  }
 
   return <>
     <div className={styles.acceuil}>
@@ -59,28 +66,28 @@ export default function Home({ user }) {
 
 
 
-            <div className={styles.headercontainerlogo}>
+          <div className={styles.headercontainerlogo}>
 
-              <motion.div className={styles.avatarSpacer} onClick={() => router.push('/ViewProfile')} whileHover={{ scale: [1, .9, 1.08], transition: { duration: .25 } }}>
-                <Image src={user.avatar} alt='User profil' className={styles.userlogo} width={50} height={50} />
-              </motion.div>
+            <motion.div className={styles.avatarSpacer} onClick={() => router.push('/ViewProfile')} whileHover={{ scale: [1, .9, 1.08], transition: { duration: .25 } }}>
+              <Image src={user.avatar} alt='User profil' className={styles.userlogo} width={50} height={50} />
+            </motion.div>
 
-              <input
-                className={styles.searchbarheader}
-                type='search'
-                placeholder='Rechercher'
-                onChange={handleChange}
-                value={searchInput}
-              />
+            <input
+              className={styles.searchbarheader}
+              type='search'
+              placeholder='Rechercher'
+              onChange={handleSearch}
+              value={searchInput}
+            />
 
-              <div className={styles.menuSpacer}>
-                <Menu />
-              </div>
-
-
+            <div className={styles.menuSpacer}>
+              <Menu />
             </div>
 
-   
+
+          </div>
+
+
         </header>
 
       </div>
@@ -90,21 +97,22 @@ export default function Home({ user }) {
       <main className={styles.main}>
         <motion.div initial='hidden' animate='visible' variants={{ hidden: { scale: .8, opacity: 0 }, visible: { scale: [.9, 1], opacity: 1, transition: { delay: .3 } } }} >
 
-        <div className={styles.imagecontainer}>
-              <ul>
-                {filteredImages.map((image) => (
-                  <li key={image.id} >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      className={styles.topcards}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className={styles.imagecontainer}>
+            <ul>
+              {filteredImages.map((image) => (
+                <li key={image.id} >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    className={styles.topcards}
+                    onClick={() => filterbySubject(image.id)}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <Feed props={user.id} />
+          <Feed userId={user.id} filter={filter} />
 
         </motion.div>
       </main>
