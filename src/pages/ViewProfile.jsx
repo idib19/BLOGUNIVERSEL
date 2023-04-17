@@ -35,7 +35,7 @@ export default function ViewProfile({user}) {
                     <button className={styles.inscrirebutton} onClick={() => router.push('/EditProfile')}>Edit Profil</button>
                 </motion.div>
                 <motion.div className={styles.span} whileHover={{ scale: [1, 1.1], transition: { duration: .25 } }}>
-                    <button className={styles.inscrirebutton} onClick={() => router.push('/')}>Retour à l'accueil</button>
+                    <button className={styles.inscrirebutton} onClick={() => router.push('/')}>Retour à l&apos;accueil</button>
                 </motion.div>
            </div>
         </motion.div>
