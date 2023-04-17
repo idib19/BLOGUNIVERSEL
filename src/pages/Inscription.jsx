@@ -270,7 +270,7 @@ export default function Inscription() {
                             </label>
                             
                             <motion.div whileHover={{ scale: [1, 0.99, 1.03], transition: { duration: .25 } }}>
-                                <button className={styles.inscrirebutton} type='submit'>S'inscrire</button>
+                                <button className={styles.inscrirebutton} type='submit'>S&apos;inscrire</button>
                             </motion.div>
                     
                         </div>
