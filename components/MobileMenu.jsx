@@ -1,19 +1,25 @@
-import styles from '../src/styles/Menu.module.css'
+import styles from '../src/styles/MobileMenu.module.css'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
  
-export default function Menu() {
+export default function MobileMenu() {
     const router = useRouter()
 
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
 
     const toggler = () => {
         setVisible(!visible);
     }
 
     return <>
+        <motion.div className={styles.menutoggle} onClick={toggler} whileHover={{ scale: [1, .9, 1.08], transition: { duration: .25 } }}>
+            <div className={styles.hamburger}>
+                <span></span>
+            </div>
+        </motion.div>
+
 
         {visible &&
 

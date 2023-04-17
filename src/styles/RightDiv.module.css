@@ -1,0 +1,78 @@
+.maincontainer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 7rem;
+    margin-right: 3rem;
+    background-color: #0089c4;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 1rem;
+    
+}
+
+.card {
+    background-color: #123863fb;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.banner {
+    margin: 1rem;
+    color: rgb(2, 41, 82);
+    background-color: #d7e93a;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.title {
+    margin-bottom: 2.1rem;
+}
+
+/* The subjet proposal css */
+
+.imagecontainer {
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin: 0.5rem;
+  }
+  
+  .topcards {
+    background-color: #2a91cc;
+    padding: 8px;
+    border-radius:10%;
+    height: 180px;
+    width: 180px;
+    display: inline-block;
+    vertical-align: middle;
+  
+  }
+  
+  
+  @media screen and (max-width: 1350px) {
+    .maincontainer {
+      visibility: visible;
+      margin-right: 1rem;
+
+  }
+
+  
+  }
+  
+  @media screen and (max-width: 1260px) {
+    .maincontainer {
+      visibility: hidden;
+
+  }
+
+  
+  }
+  

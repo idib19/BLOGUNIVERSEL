@@ -94,14 +94,14 @@ export default function Post({ post, idUser }) {
 
                     <Image src={post.user.avatar} alt={post.user.name} className={styles.userlogo} width={25} height={25} />
 
-                    {post.user.name}
+                    <p className={styles.userUnderIcon}>{post.user.name}</p>
 
                 </h5>
 
                 <div className={styles.contentbackground}>
 
                     <div className={styles.contentDetails}>
-                        <p>
+                        <p className={styles.content}>
                             {post.content}
                         </p>
 
