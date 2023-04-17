@@ -4,6 +4,7 @@ import styles from 'src/styles/Accueil.module.css'
 import Topics from 'components/SubjectProposal'
 import Feed from 'components/Feed'
 import Menu from 'components/Menu'
+import MobileMenu from 'components/MobileMenu'
 import Image from 'next/image'
 import logo from 'public/blogueUniverselLogo.png'
 import profilelogo from 'public/profileiconlogo.png'
@@ -23,7 +24,7 @@ export default function Home({ user }) {
   const router = useRouter()
 
   const [searchInput, setSearchInput] = useState("")
-  // ICI le tableau images , on va la recuperer sur la database et on pourra appliiquer la fonction 
+  // ICI le tableau images , on va la recuperer sur la database et on pourra appliquer la fonction 
   //de filtering sur la terminaison API. for exemple on va fetcher sur api/getsubjects
   const images = [
     { id: 1, src: basket, alt: 'Basketball logo' },
@@ -84,6 +85,7 @@ export default function Home({ user }) {
               <Menu />
             </div>
 
+            <MobileMenu />
 
           </div>
 
@@ -112,7 +114,9 @@ export default function Home({ user }) {
             </ul>
           </div>
 
+
           <Feed userId={user.id} filter={filter} />
+
 
         </motion.div>
       </main>

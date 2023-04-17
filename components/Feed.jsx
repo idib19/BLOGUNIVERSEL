@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from '../components/Modal';
 import Post from './Posts';
+import RightDiv from './RightDiv';
 
 
 export default function Feed(props) {
@@ -81,6 +82,10 @@ export default function Feed(props) {
 
     return (
         <>
+
+        <div>
+            <RightDiv />
+        </div>
 
             <div className={styles.maincontainer}>
                 <motion.div className={styles.feedsort} whileHover={{ scale: [1, 1.15], transition: { duration: .25 } }}>

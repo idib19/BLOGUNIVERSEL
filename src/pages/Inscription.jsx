@@ -54,7 +54,7 @@ export default function Inscription() {
             <div className={styles.divcontainer}>
                 <div className={styles.mainCard}>
                     <div className={styles.card}>
-                        <h3 className={styles.h3}>Créez Votre Compte!</h3>
+                        <h3 className={styles.allh3}>Créez Votre Compte!</h3>
                     </div>
 
                     <form className={styles.form} onSubmit={handleSubmit}>
@@ -104,7 +104,7 @@ export default function Inscription() {
 
                         
                         <div className={styles.card2}>
-                            <h4 className={styles.h3}>Choisis une photo de profil</h4>
+                            <h4 className={styles.allh3}>Choisis une photo de profil</h4>
                         </div>
 
                         <div className={styles.avatarChoice}>

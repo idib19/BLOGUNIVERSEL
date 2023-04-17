@@ -59,7 +59,7 @@ export default function EditProfile({user}) {
         <motion.div initial='hidden' animate='visible' variants={{ hidden: { scale: .8, opacity: 0 }, visible: { scale: [1, .9, 1], opacity: 1, transition: { delay: 0.2 } } }}  className={styles.mainCard}>
             
             <div className={styles.card}>
-                <h3 className={styles.h3}>Editer Votre Profil</h3>
+                <h3 className={styles.editProfile}>Editer Votre Profil</h3>
             </div>
 
             <form className={styles.form} onSubmit={handleSubmit}>
