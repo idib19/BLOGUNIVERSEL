@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     # ici on indique la versions de l'action github actions/checkoutv4
-    - uses: actions/ckeckout@v4 
+    - uses: actions/checkout@v4 
     # on indique une commande a exec dans les shells des runnes github
     - name: run a test script
       run: echo Hello IKASUGU 
