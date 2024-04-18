@@ -14,7 +14,7 @@ on:
   
 #un workflow est compose de un ou plusieurs jobs, ce dernier en contient appelle premierjob
 jobs:
-  nom-premierjob:
+  first-workflow-test:
   # un job doit au mons avoir un "runs-un" ou un "uses"
     runs-on: ubuntu-latest
     steps: 
