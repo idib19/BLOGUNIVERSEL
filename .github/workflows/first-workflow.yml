@@ -1,0 +1,35 @@
+name : CI 
+# on (conrole le moment/condition que le workflow va se declenche)
+on: 
+  # Ce workflow se declenche apres un push ou pull_request sur la branche main
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      
+  # workflow_dispatch permet de rouler des ce workflow mannuellement a travers github actions 
+  workflow_dispatch:
+  
+#un workflow est compose de un ou plusieurs jobs, ce dernier en contient appelle premierjob
+jobs:
+  nom-premierjob:
+  # un job doit au mons avoir un "runs-un" ou un "uses"
+    runs-on: ubuntu-latest
+    steps: 
+    # ici on indique la versions de l'action github actions/checkoutv4
+    - uses: actions/ckeckout@v4 
+    # on indique une commande a exec dans les shells des runnes github
+    - name: run a test script
+      run: echo Hello IKASUGU 
+
+    # rouler plusieurs commandes a la fois 
+    - name: Run multiple actions script
+      run: echo test2, and deploy your project, echo test2
+    
+    
+    
+    
+    
+      
